@@ -33,7 +33,7 @@ fi
     
 CASE_NAME=${SETUP_CASE}_${TAG}.${GIT_HASH}.`date +"%Y-%m-%d"`
 
-cd ${CIMEROOT}
+rm -r ${CASE_NAME}
 
 ./create_newcase -case ${CASE_NAME} -res ${RES} -compset ${COMPSET} -mach ${MACH} -project ${PROJECT}
 
@@ -56,8 +56,8 @@ if [ "$STAGE" = "AD_SPINUP"  ]; then
     ./xmlchange ELM_BLDNML_OPTS="-bgc fates -no-megan -no-drydep -nutrient cnp -nutrient_comp_pathway rd -soil_decomp century -bgc_spinup on"
     
     ./xmlchange DATM_MODE=CLMGSWP3v1
-    ./xmlchange DATM_CLMNCEP_YR_ALIGN=1900
-    ./xmlchange DATM_CLMNCEP_YR_START=1900
+    ./xmlchange DATM_CLMNCEP_YR_ALIGN=1901
+    ./xmlchange DATM_CLMNCEP_YR_START=1901
     ./xmlchange DATM_CLMNCEP_YR_END=1925
     # Read climate data from DVS (on CFS) in read-only mode - magic speed gains
     ./xmlchange DIN_LOC_ROOT="/dvs_ro/cfs/cdirs/e3sm/inputdata"
@@ -84,7 +84,7 @@ fates_paramfile = '/global/homes/j/jneedham/fates-cnp-scripts/paramfiles/fates_p
 use_fates_sp = .false.
 fates_spitfire_mode = 1
 fates_harvest_mode = 'no_harvest'
-use_fates_potentialveg = .true.
+use_fates_potentialveg = .false.
 fluh_timeseries = ''
 use_century_decomp = .true.
 spinup_state = 1
@@ -114,8 +114,8 @@ elif [ "$STAGE" = "POSTAD_SPINUP" ]; then
     ./xmlchange ELM_BLDNML_OPTS="-bgc fates -no-megan -no-drydep -nutrient cnp -nutrient_comp_pathway rd -soil_decomp century"
     
     ./xmlchange DATM_MODE=CLMGSWP3v1
-    ./xmlchange DATM_CLMNCEP_YR_ALIGN=1900
-    ./xmlchange DATM_CLMNCEP_YR_START=1900
+    ./xmlchange DATM_CLMNCEP_YR_ALIGN=1901
+    ./xmlchange DATM_CLMNCEP_YR_START=1901
     ./xmlchange DATM_CLMNCEP_YR_END=1925
     # Read climate data from DVS (on CFS) in read-only mode - magic speed gains
     ./xmlchange DIN_LOC_ROOT="/dvs_ro/cfs/cdirs/e3sm/inputdata"
@@ -143,7 +143,7 @@ fates_paramfile = '/global/homes/j/jneedham/fates-cnp-scripts/paramfiles/fates_p
 use_fates_sp = .false.
 fates_spitfire_mode = 1
 fates_harvest_mode = 'no_harvest'
-use_fates_potentialveg = .true.
+use_fates_potentialveg = .false.
 fluh_timeseries = ''
 use_century_decomp = .true.
 spinup_state = 0
@@ -205,7 +205,7 @@ fates_paramfile = '/global/homes/j/jneedham/fates-cnp-scripts/paramfiles/fates_p
 use_fates_sp = .false.
 fates_spitfire_mode = 1
 fates_harvest_mode = 'no_harvest'
-use_fates_potentialveg = .true.
+use_fates_potentialveg = .false.
 fluh_timeseries = ''
 use_century_decomp = .true.
 spinup_state = 0
