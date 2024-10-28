@@ -1367,8 +1367,8 @@ data:
     0.00963, 0.00963, 0.00963, 0.00963, 0.00963, 0.00963, 0.00963, 0.00963, 
     0.00963 ;
 
- fates_maintresp_leaf_vert_scaler_coeff2 = 2.43, 2.43, 2.43, 2.43, 2.43, 
-    2.43, 2.43, 2.43, 2.43, 2.43, 2.43, 2.43 ;
+ fates_maintresp_leaf_vert_scaler_coeff2 = 1.7, 1.7, 1.7, 1.7, 1.7, 1.7,
+    2.43, 2.43, 2.43, 2.43, 2.43, 2.43 ;
 
  fates_maintresp_reduction_curvature = 0.01, 0.01, 0.01, 0.01, 0.01, 0.01, 
     0.01, 0.01, 0.01, 0.01, 0.01, 0.01 ;
@@ -1635,6 +1635,8 @@ data:
   0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
   0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1 ;
 
  fates_fire_FBD = 15.4, 16.8, 19.6, 999, 4, 4 ;
@@ -1751,7 +1753,7 @@ data:
 
  fates_leaf_theta_cj_c4 = 0.999 ;
 
- fates_maintresp_leaf_model = 1 ;
+ fates_maintresp_leaf_model = 2 ;
 
  fates_maintresp_nonleaf_baserate = 2.525e-06 ;
 
@@ -1783,7 +1785,7 @@ data:
 
  fates_q10_mr = 1.5 ;
 
- fates_rad_model = 1 ;
+ fates_rad_model = 2 ;
 
  fates_regeneration_model = 1 ;
 
