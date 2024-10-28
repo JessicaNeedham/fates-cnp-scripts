@@ -9,7 +9,7 @@ export COMPILER=intel
 
 export TAG='cnp_test1'
 export CASEROOT=/pscratch/sd/j/jneedham/elm_runs/fates-cnp/
-export CIMEROOT=/global/homes/j/jneedham/E3SM/cime/scripts
+export CIMEROOT=/global/homes/j/jneedham/E3SM_calibration/E3SM/cime/scripts
 cd ${CIMEROOT}
 
 export CIME_HASH=`git log -n 1 --pretty=%h`
@@ -76,7 +76,7 @@ if [ "$STAGE" = "AD_SPINUP"  ]; then
 
     cat > user_nl_elm <<EOF
 fates_parteh_mode=2
-nu_comp='rd'
+nu_com='RD'
 use_fates_luh = .false.
 use_fates_nocomp = .true.
 use_fates_fixed_biogeog = .true.
@@ -135,7 +135,7 @@ elif [ "$STAGE" = "POSTAD_SPINUP" ]; then
     cat > user_nl_elm <<EOF
 finidat=''
 fates_parteh_mode=2
-nu_comp='rd'
+nu_com='RD'
 use_fates_luh = .false.
 use_fates_nocomp = .true.
 use_fates_fixed_biogeog = .true.
@@ -197,7 +197,7 @@ elif [ "$STAGE" = "TRANSIENT" ]; then
     cat > user_nl_elm <<EOF
 finidat=''
 fates_parteh_mode=2
-nu_comp='rd'
+nu_com='RD'
 use_fates_luh = .false.
 use_fates_nocomp = .true.
 use_fates_fixed_biogeog = .true.
